@@ -1,0 +1,81 @@
+{{!--
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="/">Links App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acciones
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item text-white" href="/links">Todos los links</a></li>
+              <li><a class="dropdown-item text-white" href="/links/add">Añadir link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/authentication/profile">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/authentication/logout">Cerrar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/authentication/signin">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/authentication/signup">Registrarse</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+--}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Links App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acciones
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/links">Todos los links</a></li>
+              <li><a class="dropdown-item" href="/links/add">Crear link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/authentication/profile">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/authentication/logout">Cerrar sesión</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/authentication/signin">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/authentication/signup">Registrarse</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
